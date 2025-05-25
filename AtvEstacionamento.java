@@ -86,7 +86,7 @@ class Estacionamento {
     private void calcularPagamento(Carro carro) {
         LocalDateTime agora = LocalDateTime.now();
         long horas = java.time.Duration.between(carro.getHorarioEntrada(), agora).toHours();
-        if (horas == 0) horas = 1; // Cobrar pelo menos 1 hora
+        if (horas == 0) horas = 1; 
         double valor = 0;
         switch (carro.getTipo().toLowerCase()) {
             case "pequeno":
